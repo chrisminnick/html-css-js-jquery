@@ -1,0 +1,135 @@
+/***************************************************
+	Hovercards
+****************************************************/
+#hovercard{
+		position:absolute;
+		width:300px;
+		font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+		border:1px solid rgb(200,200,200);
+		color:rgb(100,100,100);
+		z-index:999;
+		background-color:white;
+		cursor: pointer;
+		text-align:left;
+		line-height: 14px;
+}
+
+span.snFollowButton em{
+	font-style:normal;
+	color:#9eb740;
+	color:#91231e;		
+}
+
+span.snFollowButton:hover{
+	border: 2px solid #9eb740;
+}
+	#hovercard #content{
+		position:relative;
+		width:300px;
+	}
+	
+	#hovercard #content .title{
+		margin:10px 0px 3px 0px;
+		font-size: 11px;
+		font-weight:bold;
+		color: rgb(75,75,75);
+	}
+	
+	#hovercard #content #loading{
+		position:absolute;
+		padding-top:40px;
+		text-align:center;
+		font-size:11px;
+		background-color:white;
+		top:0px;
+		left:0px;
+		right:0px;
+		bottom:0px;
+	}
+	
+	#para{
+		position:absolute;
+		top:200px;
+		left:300px;
+		font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	}
+	
+	#hovercard #dataBox{
+		padding:15px;
+	}
+	
+	#hovercard #avatar{
+		margin-right:10px;
+		width: 50px;
+		float: left;
+		
+	}
+	
+	#hovercard #personalInfo{
+		width: 210px;
+		float: left;
+		font-size:11px;
+	}
+	
+	#hovercard #personalInfo #name{
+		font-weight:bold;
+		font-size: 17px;
+	}
+	
+	#hovercard #personalInfo #profile{
+		margin-top:1px;
+		margin-bottom:4px;
+	}
+	
+	#hovercard #personalInfo #statuses,#followers{
+		font-weight:bold;
+		font-size: 15px;
+	}
+	
+	#hovercard #bio{
+		font-size:11px;
+	}
+	
+	#hovercard #status{
+		font-size:11px;
+	}
+	
+	#hovercard #actionBox{
+		border-top:1px solid rgb(200,200,200);
+		font-size:11px;
+		background-color:rgb(250,250,250);
+		padding:10px 0px 10px 10px;
+	}
+	
+/**************************************************************
+	Buttons
+**************************************************************/
+
+button.snSubscribeButton {
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	text-decoration: none;
+	padding: 8px 10px 8px 50px;
+	background-color: #ffffff;
+	border: 2px solid #86b2c7;
+	color: rgb(100, 100, 100);
+	-moz-border-radius:10px; 
+	-webkit-border-radius:10px;
+	
+	font-size:12px;
+	background-image: url("icon.jpg");
+	background-repeat: no-repeat;
+	background-position: 8px;
+	width:inherit;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+button.snSubscribeButton em{
+	font-style:normal;
+	color:#9eb740;
+	color:#91231e;		
+}
+
+button.snSubscribeButton:hover{
+	border: 2px solid #9eb740;
+}
