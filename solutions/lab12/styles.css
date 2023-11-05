@@ -1,0 +1,38 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+#movie-reviews,
+#review-form {
+  width: 80%;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#reviews-list {
+  list-style: none;
+  padding: 0;
+}
+
+#reviews-list li {
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+}
+
+button {
+  background: #5cb85c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #449d44;
+}
