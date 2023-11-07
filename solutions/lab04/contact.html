@@ -10,20 +10,20 @@
 <p>Please fill out the following form and we'll get back to you.</p>
 <form method="GET" action="send.php">
     <div><label for="contact-name">Your Name</label>
-    <input type="text" id="contact-name" placeholder="Enter your name" required></div>
+    <input type="text" id="contact-name" name="contact-name" placeholder="Enter your name" required></div>
     <div><label for="contact-phone">Phone Number</label>
-    <input type="tel" id="contact-phone" placeholder="Enter your phone number"></div>
+    <input type="tel" id="contact-phone" name="contact-phone" placeholder="Enter your phone number"></div>
     <div><label for="contact-email">Email</label>
-    <input type="email" id="contact-email" placeholder="Enter your email address"></div>
+    <input type="email" id="contact-email" name="contact-email" placeholder="Enter your email address"></div>
     <div><label for="contact-notes">Enter a Message</label>
-    <textarea id="contact-notes" cols="40" rows="8"></textarea></div>
+    <textarea id="contact-notes" name="contact-notes" cols="40" rows="8"></textarea></div>
     <div><label for="callback-time">When do you prefer to be called back?</label>
-    <select id="callback-time">
+    <select id="callback-time" name="callback-time">
         <option value="morning">Morning</option>
         <option value="afternoon">Afternoon</option>
         <option value="evening">Evening</option>
     </div>    
-    <div><input type="submit" id="contact-submit" value="Submit"></div>
+    <div><input type="submit" id="contact-submit" name="contact-submit" value="Submit"></div>
 </form>
 </body>
 </html>
