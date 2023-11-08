@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JQuery Trigger Method Demo</title>
+    <style>
+      /*  For styling  */
+      * {
+        box-sizing: border-box;
+      }
+      input[type="text"] {
+        width: 100%;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 3px;
+      }
+      label {
+        display: inline-block;
+        padding: 12px 10px 12px 2px;
+      }
+      .container {
+        background-color: #99c;
+        border-radius: 3px;
+        padding: 8px;
+      }
+      body {
+        font-family: "Open Sans";
+        font-size: 20px;
+      }
+      form {
+        padding: 20px;
+        background: #300;
+        color: #ff9;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 5px;
+        border-radius: 4px;
+      }
+      /* Set the styling for the Trigger button */
+      .registerbtn {
+        background-color: #9c6;
+        color: #030;
+        border: none;
+        padding: 15px 0px;
+        margin: 19px 0px;
+        cursor: pointer;
+        border-radius: 5px;
+        float: left;
+      }
+      @media screen and (max-width: 600px) {
+        .row {
+          width: 100%;
+          margin-top: 0;
+        }
+      }
+      .registerbtn:hover {
+        opacity: 4;
+      }
+      form .error {
+        color: #ff0009;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form class="form" id="MyForm" name="MyForm">
+        <fieldset>
+          <legend>Form</legend>
+          <p>*** Click Confirm button to see the trigger effect ***</p>
+          <div class="row">
+            <label for="FName"> Enter your First Name </label>
+            <input id="name" name="FName" type="text" value="" />
+          </div>
+          <div class="row">
+            <input
+              class="registerbtn"
+              id="check"
+              value="Trigger"
+              style="text-align: center; font-weight: bold"
+            />
+            <br />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <!-- Script for triggering function “Focus” when user clicks “Trigger” button -->
+    <script src="../libs/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#check").click(function () {
+          $("#name").trigger("click");
+        });
+        $("#name").click(function () {
+          $("#name").after("The field is empty");
+        });
+      });
+    </script>
+  </body>
+</html>

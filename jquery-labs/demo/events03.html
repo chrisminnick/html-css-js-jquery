@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Object</title>
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <h1>This is the header</h1>
+      </div>
+      <button>Remove the event</button>
+    </main>
+    <script src="../libs/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Bind click event for .header
+        $('.header').on('click', function(event){
+          console.log("X coordinate : " + event.pageX);
+          console.log("Y coordinate : " + event.pageY);
+          console.log("Taget : " + event.target);
+          console.log("Which : " +  event.which);
+          $(this).css("background-color", "yellow");
+        });        
+      });
+    </script>
+  </body>
+</html>

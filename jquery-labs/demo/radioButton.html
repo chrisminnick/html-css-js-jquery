@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <form id="myForm">
+      <fieldset>
+        <legend>Select a language</legend>
+        <div>
+          <input
+            type="radio"
+            id="english"
+            name="language"
+            value="English"
+            checked
+          />
+          <label for="english">English</label>
+        </div>
+        <div>
+          <input type="radio" id="french" name="language" value="French" />
+          <label for="french">French</label>
+        </div>
+        <button id="checkRadioBtn">Check radio selection</button>
+      </fieldset>
+    </form>
+    <script src="../libs/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+               
+        $("#checkRadioBtn").on("click", () => {
+          const selectedRadioBtn = $("input[type='radio'][name=language]:checked", "#myForm").val();
+          console.log(selectedRadioBtn);
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
+
+<!--
+    The attribute equals selector ([name="value"]) is used to select elements with a 
+    type of “radio” and a name equal to “language”. The :checked selector matches all 
+    checked elements. The second argument of the jQuery selector is “#myForm”. 
+    The selectors only check for elements in the form with an id of “myForm”.
+
+    $("input[type='radio'][name=language]:checked", '#myForm').val();
+
+
+
+-->

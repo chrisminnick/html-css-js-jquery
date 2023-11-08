@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selection by Attribute</title>
+  </head>
+  <body>
+    <main>
+        <h1 class="article">This is article 0</h1>
+        <div>This is not included</div>
+        <div class="article">This is article 1</div>
+        <div class="article">This is article 2</div>
+        <div>This is not included</div>
+        <div class="article">This is article 3</div>
+        <div class="article">This is article 4</div>
+        <div>This is not included</div>
+        <div class="article">This is article 5</div>
+        <div class="article">This is article 6</div>      
+    </main>
+    <script src="../libs/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.article:eq(2)').css("color", "red");
+        $('.article:gt(1)').css("color", "blue");
+        $('.article:lt(3)').css("backgroundColor", "cyan");
+        $('.article:first').css("color", "red");
+        $('.article:last').css("font-size", "30px");
+        $('.article:even').css("color", "red");
+        $('.article:odd').css("backgroundColor", "blue");
+      });
+    </script>
+  </body>
+</html>

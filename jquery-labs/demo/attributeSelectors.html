@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selection by Attribute</title>
+  </head>
+  <body>
+    <form name="foodieform">
+      <fieldset>
+      <legend>Search a recipe:</legend>
+      <label for="txt_recipe_name">Recipe name:</label>
+      <input type="text" name="txt_recipe_name" id="txt_recipe_name" />
+      <label for="meal_type">Type of meal:</label>
+      <select id="meal_type" name="meal_type">
+      <option value="Apetizer" selected>Apetizer</option>
+      <option value="Entree">Entree</option>
+      <option value="Drinks">Drinks</option>
+      <option value="Desert">Desert</option>
+      </select>
+  </fieldset>
+  <fieldset>
+  <legend>Choose a type of food</legend>
+  <input type="checkbox" name="food_type" value="French" checked>French</input>
+  <input type="checkbox" name="food_type" value="Italian">Italian</input>
+  <input type="checkbox" name="food_type" value="Mexican">Mexican</input>
+  <input type="checkbox" name="food_type" value="Chinese">Chinese</input>
+  </fieldset>
+  <fieldset>
+  <legend>Skills required</legend>
+  <input type="radio" name="food_skills" value="1"/>Easy
+  <input type="radio" name="food_skills" value="2"/>Medium
+  <input type="radio" name="food_skills" value="3" checked/>Hard<br/>
+  </fieldset>
+  <input type="button" name="form-button" id="form-button" value="search"/>
+  <input type="reset" name="form-reset" id="form-reset"/>
+  </form>    
+
+
+   <a href="http://mrkn.co/f/271">Markana</a>
+    <script src="../libs/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('a["http://mrkn.co/f/271"]').css("text-decoration", "none");
+        $("*").css("color", "red");
+        $(".status").css("fontSize", "20px");
+        $("#header").css("fontWeight", "bold");
+      });
+    </script>
+  </body>
+</html>

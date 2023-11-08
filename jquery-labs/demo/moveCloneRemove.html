@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selection by Attribute</title>
+  </head>
+  <body>
+    <main>
+      <div class="article">
+        <h1>The first article</h1>
+        <p>Article 0 Paragraph 1</p>
+        <p>Article 0 Paragraph 2</p>
+        <p>Article 0 Paragraph 2</p>
+      </div>      
+      <div class="article">
+        <h1>The second article</h1>
+        <p>Article 1 Paragraph 1</p>
+        <p>Article 1 Paragraph 2</p>
+        <p>Article 1 Paragraph 2</p>
+      </div>
+      <div id="section">
+        <h1>This is the section</h1>
+        <p>Section 1</p>
+        <p>Section 2</p>
+        <p>Section 3</p>
+      </div>
+    </main>
+    <script src="../libs/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Moving Elements
+        // $("#section").append($(".article:first"));
+        // $('.article:first').appendTo($('#section'));
+
+        // Cloning Elements
+        // var $article=$('.article:first').clone(); 
+        // $("#section").append($($article));
+
+        // Removing Elements
+        // $('.article:first').remove();
+        // $('.article:first').detach();
+
+        // Replacing Elements
+        $('.article:first').each(function(){
+          $(this).replaceWith('<h3>'+$(this).text()+'</h3>');
+        });
+
+
+
+
+      });
+    </script>
+  </body>
+</html>

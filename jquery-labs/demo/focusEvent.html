@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <label for="name">Name:</label>
+      <input type="text" id="name" />
+      <label for="age">Age:</label>
+      <input type="text" id="age" />
+    </div>
+    <button id="submit">Focus</button>
+    <script src="../libs/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#submit").on("click", function () {
+          $("#name").focus();
+          console.log("click event");
+          var value = $("#name").val();
+          console.log(value);
+          //$("#name").focus().val("").val(value);
+        });
+
+        $("#name").on("blur", function () {
+            var nameValue = $(this).val()
+            if(nameValue == "") {
+                console.log("name is empty")
+            }
+            else
+            {
+                console.log(`name value is ${nameValue}`);
+            }
+        });
+
+
+      });
+    </script>
+  </body>
+</html>

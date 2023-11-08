@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hierarchy Selectors</title>
+  </head>
+  <body>
+    <h2>
+        <p>Preceeded by h2</p>
+        <p>Preceeded by h2</p>
+    </h2>
+    <div>
+        <span>Span descendant of element div</span>
+    </div>
+    <ul>
+        <li>Child 1 - Immediate children</li>
+        <li>Child 2 - Immediate children</li>
+        <li>Child 3 - Immediate children</li>
+    </ul>
+    <ol>
+        <li>Child 1 - Immediate children of ol</li>
+        <li>Child 2 - Immediate children of ol</li>
+        <li>Child 3 - Immediate children of ol</li>
+    </ol>
+    <p>Paragraph by itself</p>
+    <div id="footer">
+        <span>Span descendant of element with the id footer</span>
+    </div>
+    <div>
+      <p>...</p>
+      <h2>...</h2>
+      <p>This paragraph will be selected</p>
+      <div>
+        <p>...</p>
+      </div>
+      <p>This paragraph will be selected</p>
+    </div>
+    <script src="../libs/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#footer span").css("backgroundColor", "rgb(173, 216, 230)");
+        $("ul > li").css("borderStyle", "dashed");
+        $("h2 + p").css("fontSize", "20px");        
+        $("h2 ~ p").text("general sibling selector")
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selection by Attribute</title>
+  </head>
+  <body>
+    <main>
+        <div id="container">
+            <ul id="list">
+                <li><a href="http://domain1.com">Item #1</a></li>
+                <li><a href="/local/path/1">Item #2</a></li>
+                <li><a href="/local/path/2">Item #3</a></li>
+                <li><a href="http://domain4.com">Item #4</a></li>
+            </ul>
+    </div>
+</body>
+</html>    
+    </main>
+    <script src="../libs/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // no handler for this
+        $( "#list" ).append( "<li><a href='http://newdomain.com'>Item #5</a></li>" );  
+
+        // Solution: Event delegation
+        // Attach a delegated event handler
+        $( "#list" ).delegate( "a", "click", function( event ) {
+          event.preventDefault();
+          console.log( $( this ).text() );
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Form New Features</title>
+</head>
+<body>
+    <strong>Note:  All fields are required.</strong>
+    <form> 
+        <label for="firstname">First Name : </label> 
+        <input type="text" name="firstname" required autofocus placeholder="enter your first name"/> <br/> 
+        <label for="lastname">Last Name : </label> 
+        <input type="text" name="lastname" required placeholder="enter your last name"/> <br/> 
+        <label for="address" required>Address : </label> 
+        <textarea rows="2" cols="20"></textarea><br />
+        <label for="birthday">Birthday : </label> 
+        <input type="date" id="birthday" required/><br />
+        <label for="email">Email: </label> 
+        <input type="email" id="email" name="email" required/> <br/> 
+        <label for="email">Password: </label> 
+        <input type="password" id="password" name="password" minlength="5" maxlength="12" required/><sup>[8-12 characters]</sup><br/> 
+        <label for="gender">Gender: </label> 
+        <input type="radio" id="gender" name="gender" value="male"/ required>Male 
+        <input type="radio" id="gender" name="gender" value="female"/>Female <br/>
+        <label for="hobbies">Hobbies : </label> 
+        <input type="checkbox" id="hobbies" name="habbies" value="gardening"/ required>Gardening
+        <input type="checkbox" id="hobbies" name="hobbies" value="learning"/>Learning 
+        <input type="checkbox" id="hobbies" name="hobbies" value="painting"/>Painting <br/>
+        <input type="submit">
+    </form>    
+</body>
+</html>

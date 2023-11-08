@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JQuery Trigger Method Demo</title>
+    <style>
+      div {
+        padding: 10px;
+        margin: 10px;
+        width: 60px;
+        border: 1px solid #000;
+        border-width: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <span style="font-weight: bold">
+      Click any of the squares to see the trigger demo effect:
+    </span>
+    <br />
+    <div id="Div_One" style="background-color: #0cc; text-align: center">
+      <b> ONE </b>
+    </div>
+    <div id="Div_Two" style="background-color: #0cc; text-align: center">
+      <b> TWO </b>
+    </div>
+    <!-- Below is the script used to trigger, trigger () method -->
+    <script src="../libs/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#Div_One").click(function () {
+          $("#Div_Two").trigger("click");
+        });
+        $("#Div_Two").click(function () {
+          alert("You have clicked Box 'TWO' ");
+        });
+      });
+    </script>
+  </body>
+</html>

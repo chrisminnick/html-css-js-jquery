@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Events</title>
+  </head>
+  <body>
+    <main>
+        <!-- The change event is sent to an element when its value changes. This event is limited to <input> elements, 
+            <textarea> boxes and <select> elements. For select boxes, checkboxes, and radio buttons, the event 
+                is fired immediately when the user makes a selection with the mouse, but for the other element 
+                types the event is deferred until the element loses focus. -->
+      <form>
+        <!-- <input class="target" type="text" value="Field 1" /> -->
+        <select class="target">
+          <option value="option1" selected="selected">Option 1</option>
+          <option value="option2">Option 2</option>
+        </select>
+      </form>
+      <div id="other">Trigger the handler</div>
+    </main>
+    <script src="../libs/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+
+        console.log($('.target').val());
+        console.log($('.target option:selected').text());
+
+        $(".target").on("change", function () {
+          alert("Handler for `change` called.");
+          console.log($('.target').val());
+          console.log($('.target option:selected').text());
+        });
+
+        /*
+            Now when the second option is selected from the dropdown, the alert is displayed. 
+            It is also displayed if you change the text in the field and then click away. If 
+            the field loses focus without the contents having changed, though, the event is 
+            not triggered. To trigger the event manually, use .trigger( "change" ):
+        */
+
+        $("#other").on("click", function () {
+          $(".target").trigger("change");
+        });
+      });
+    </script>
+  </body>
+</html>

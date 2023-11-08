@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unbinding Events</title>
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <h1>This is the header</h1>
+      </div>
+      <button>Remove the event</button>
+    </main>
+    <script src="../libs/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Bind click event for .header
+        $('.header').on('click', function(){
+          $(this).css("background-color", "yellow");
+        });
+
+        // Click button to unbind the click event for .header
+        // $("button").on("click", function () {
+        //  $('.header').off('click');
+        // });
+
+        // Click button to unbind the click event for .header
+        // Deprecated on 3.0
+        $("button").on("click", function () {
+          $('.header').unbind('click');
+        });
+        
+      });
+    </script>
+  </body>
+</html>

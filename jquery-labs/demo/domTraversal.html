@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selection by Attribute</title>
+  </head>
+  <body>
+    <main>
+        <div class="article">
+            <p>Paragraph 1</p>
+            <p>Paragraph 1</p>
+            <p>Paragraph 1</p>
+            <div>
+                <p>Paragraph 2</p>
+                <p>Paragraph 2</p>
+                <p>Paragraph 2</p>
+            </div>            
+        </div>    
+        <p>Paragraph</p>
+        <p>Before header 2</p>
+        <h2>Header 2</h2>
+        <div><p>Paragraph 2 under header 2</p></div>
+        <p>Paragraph 2 under header 2</p>
+    </main>
+    <script src="../libs/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.article').children('p').css("color", "blue");
+        // $('.article').find('p').css("color", "red");
+        // $('h2').prev().css("color", "cyan");
+        // $('h2').next('p').css("color", "yellow");
+      });
+    </script>
+  </body>
+</html>

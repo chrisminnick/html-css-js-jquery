@@ -1,2 +1,3 @@
 # html-css-js-jquery
-Labs for HTML, CSS, JavaScript &amp; jQuery course
+
+Labs and solutions for HTML, CSS, JavaScript &amp; jQuery course
