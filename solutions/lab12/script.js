@@ -16,11 +16,19 @@ $(document).ready(function () {
   $('#new-review-form').submit(function (event) {
     event.preventDefault();
 
-    var movieTitle = $('#movieTitle').val().trim();
-    var reviewText = $('#reviewText').val().trim();
+    let movieTitle = $('#movieTitle').val().trim();
+    let reviewText = $('#reviewText').val().trim();
+    let movieRating = $('#movieRating').val().trim();
 
-    if (movieTitle === '' || reviewText === '') {
+    if (movieTitle === '' || reviewText === '' || movieRating === '') {
       alert('Please fill in all fields.');
+      return false;
+    }
+    // Check if the rating is 2 or below, and ask for confirmation
+    if (
+      parseInt(movieRating) <= 2 &&
+      !confirm('Are you sure you want to give this movie a low rating?')
+    ) {
       return false;
     }
 

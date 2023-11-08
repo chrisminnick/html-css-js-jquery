@@ -22,8 +22,16 @@
 
         <label for="reviewText">Your Review:</label>
         <textarea id="reviewText" name="reviewText" required></textarea>
-
-        <button type="submit">Submit Review</button>
+        <label for="movieRating">Your Rating:</label>
+        <select id="movieRating" name="movieRating" required>
+          <option value="">Select a rating</option>
+          <option value="5">5 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="3">3 Stars</option>
+          <option value="2">2 Stars</option>
+          <option value="1">1 Star</option>
+        </select>
+        <button type="submit" id="submit-button">Submit Review</button>
       </form>
     </div>
     <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
