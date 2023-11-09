@@ -13,7 +13,7 @@ $(document).ready(function () {
       alert('Error retrieving reviews. Please try again later.');
     },
   });
-  $('#new-review-form').submit(function (event) {
+  $('#new-review-form').on('submit', function (event) {
     event.preventDefault();
 
     let movieTitle = $('#movieTitle').val().trim();
